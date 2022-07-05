@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools { 
         maven 'MAVEN_3_6_3' 
-        jdk 'JDK_1_11' 
+        jdk 'JDK_17_0_2'
     }
 	
     stages {
@@ -23,13 +23,6 @@ pipeline {
                 }
             }
         }
-
-		 stage ('sonarQube Analysis') {
-			steps {
-				withSonarQubeEnv('sonarQube') {
-					bat 'mvn clean verify sonar:sonar -Dsonar.projectKey=Spring-Delivery3'
-				}
-			}
 		}
 
         stage ('package Stage') {
