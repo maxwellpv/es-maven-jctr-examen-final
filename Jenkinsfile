@@ -37,7 +37,7 @@ pipeline {
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} direcion ${env.WORKSPACE}"
                 withMaven(maven : 'MAVEN_3_6_3') {
-					bat '"C:\\Program Files\\Git\\mingw64\\bin\\curl.exe" -T ".\\target\\sistema-ventas-spring.war" "http://deployer:deployer@localhost:8080/manager/text/deploy?path=/sistema-ventas-spring&update=true"'
+					bat '"C:\\Program Files\\Git\\mingw64\\bin\\curl.exe" -T ".\\target\\sistema-ventas-spring.war" "http://deployer:deployer@34.125.156.219:8080/manager/text/deploy?path=/sistema-ventas-spring&update=true"'
                 }
             }
         }
