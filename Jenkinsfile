@@ -4,6 +4,8 @@ pipeline {
         maven 'MAVEN_3_6_3' 
         jdk 'JDK_17_0_2'
     }
+
+
 	
     stages {
         stage ('Compile Stage 2022-01') {
